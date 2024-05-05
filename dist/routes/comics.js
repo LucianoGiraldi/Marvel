@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const comicsController_1 = require("../controllers/comicsController");
+const router = (0, express_1.Router)();
+router.post('/', comicsController_1.criarComic);
+router.get('/', comicsController_1.listarComics);
+router.get('/:id', comicsController_1.obterComic);
+router.put('/:id', comicsController_1.atualizarComic);
+router.delete('/:id', comicsController_1.deletarComic);
+exports.default = router;
